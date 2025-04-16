@@ -1,7 +1,6 @@
 name: First GitHub pipeline
 
 on: 
-  push: 
   workflow_dispatch:
   
 jobs:
