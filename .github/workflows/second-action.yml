@@ -8,23 +8,20 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Step 1 - Start job1
-        run: echo "Job 1 - Step 1: Starting Job 1"
+      - name: step1 Checkout code
+        uses: actions/checkout@v4
 
-      - name: Step 2 - Print current directory
-        run: pwd
+      - name: step2 Print a message from job1
+        run: echo "This is job1 - Step 2"
 
-      - name: Step 3 - List files
-        run: ls -la
+      - name: step3 List files in repo
+        run: ls -l
 
   job2:
     runs-on: ubuntu-latest
     steps:
-      - name: Step 1 - Start job2
-        run: echo "Job 2 - Step 1: Starting Job 2"
+      - name: Print a message from job2
+        run: echo "This is job2 - Hello from parallel job"
 
-      - name: Step 2 - Print current date
+      - name: Show current date and time
         run: date
-
-      - name: Step 3 - Print environment variables
-        run: printenv
