@@ -1,0 +1,18 @@
+name: Second GitHub Pipeline
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job 1 step
+        run: echo "This is job 1 from second workflow"
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job 2 step
+        run: echo "This is job 2 from second workflow"
