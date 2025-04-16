@@ -1,16 +1,17 @@
-name: Multi-Job Workflow
+name: Parallel Jobs Example
 
-on: push
+on:
+  workflow_dispatch:
 
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Step in Job 1
-        run: echo "Running Job in 1"
+      - name: First Job Step
+        run: echo "Running Job 1"
 
   job2:
     runs-on: ubuntu-latest
     steps:
-      - name: Step in Job 2
+      - name: Second Job Step
         run: echo "Running Job 2"
