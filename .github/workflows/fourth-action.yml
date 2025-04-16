@@ -1,4 +1,4 @@
-name: Access Secret Example
+name: Fourth GitHub pipeline
 
 on:
   push:
