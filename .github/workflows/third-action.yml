@@ -1,0 +1,17 @@
+name: Dependent Jobs
+
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step in Job 1
+        run: echo "Running Job 1"
+
+  job2:
+    needs: job1  # This job will start only after job1 completes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step in Job 2
+        run: echo "Running Job 2 after Job 1"
