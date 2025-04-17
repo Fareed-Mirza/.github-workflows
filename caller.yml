@@ -1,0 +1,7 @@
+name: Caller Workflow
+
+on: push
+
+jobs:
+  call-reuse:
+    uses: Fareed-Mirza/.github/workflows/reusable.yml@main
