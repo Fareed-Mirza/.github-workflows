@@ -1,0 +1,10 @@
+name: Reusable Workflow
+
+on:
+  workflow_call:  # 👈 this makes it "reusable"
+
+jobs:
+  show-message:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, I am the reusable part!"
