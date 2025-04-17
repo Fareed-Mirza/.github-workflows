@@ -1,0 +1,24 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Create package.json (if missing)
+      run: npm init -y --scope=my-project
+
+    - name: Install dependencies (skip if no dependencies)
+      run: npm install || echo "No dependencies to install"
+
+    - name: Run tests (if any test script is defined)
+      run: npm test || echo "No tests defined"

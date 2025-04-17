@@ -1,0 +1,13 @@
+name: Fourth GitHub pipeline
+
+on:
+  push:
+  workflow_dispatch:  # allows manual run
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Secret
+        run: echo "My name is ${{ secrets.NAME }}"
